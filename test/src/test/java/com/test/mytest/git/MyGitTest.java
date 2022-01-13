@@ -1,4 +1,4 @@
-package com.test.demo.git;//package com.test.mytest.git;
+//package com.test.mytest.git;
 //
 //import org.apache.commons.io.FileUtils;
 //import org.eclipse.jgit.api.Git;
