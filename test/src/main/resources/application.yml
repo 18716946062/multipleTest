@@ -1,0 +1,62 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/tcg?characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.mysql.cj.jdbc.MysqlConnectionPoolDataSource
+
+  # MULTIPART (MultipartProperties)
+  servlet:
+    multipart:
+      enabled: true  # 开启 multipart 上传功能
+      max-file-size: 600000  # 单个文件的最大值
+      max-request-size: 600000 #上传文件总的最大值
+      file-size-threshold: 2048 # 文件写入磁盘的阈值
+
+# redis
+  redis:
+    # 连接工厂使用的数据库索引
+    database: 0
+    # Redis服务器主机
+    host: 192.168.152.137
+    # redis服务器端口
+    port: 6379
+    # 登录redis服务器的密码
+    #password=
+    # 连接超时（毫秒）
+    timeout: 30000
+    pool:
+      # 给定时间池可以分配的最大连接数 使用负值为无限制
+      max-active: 8
+      # 连接分配在池耗尽之前在抛出异常之前应阻止的最大时间量（连接池最大阻塞等待时间以毫秒为单位） 使用负值无限期地阻止
+      max-wait: -1
+      # 连接池中的最大空闲连接 使用负值来表示无限数量的空闲连接
+      max-idle: 8
+      # 连接池中的最小空闲连接 此设置只有在正值时才有效果
+      min-idle: 0
+
+#mongodb数据源配置
+#  data:
+#    mongodb:
+#      # 主机地址
+#      host: 127.0.0.1
+#      # 数据库
+#      database: test
+#      # 默认端口是27017
+#      port: 27017
+#      #也可以使用uri连接
+#      #uri: mongodb://bobo:123456@180.76.159.126:27017,180.76.159.126:27018,180.76.159.126:27019/articledb?connect=replicaSet&slaveOk=true&replicaSet=myrs
+
+## minio
+#minio:
+#  endpoint: http://192.168.153.130
+#  port: 9000
+#  accessKey: minioadmin
+#  secretKey: minioadmin
+#  secure: false
+#  bucketName: "test1"
+
