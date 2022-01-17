@@ -33,11 +33,9 @@ public class MyTest {
 
     @Test
     public void test(){
-        long start = System.currentTimeMillis();
         //userService.list().forEach(System.out::println);
         userService.list();
-        long end = System.currentTimeMillis();
-        log.info("耗时： {}秒", (end - start)/1000);
+        int i = 1/0;
     }
 
     @Test
