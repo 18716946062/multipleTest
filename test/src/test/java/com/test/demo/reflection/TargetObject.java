@@ -43,7 +43,7 @@ public class TargetObject {
             NoSuchMethodException, InvocationTargetException, NoSuchFieldException {
 
         /** 获取TargetObject类的Class对象并且创建TargetObject类实例 */
-        Class<?> clazz = Class.forName("com/test/demo/reflection/TargetObject");
+        Class<?> clazz = Class.forName("com.test.demo.reflection.TargetObject");
         //Class<TargetObject> clazz = TargetObject.class;
         //Class<? extends TargetObject> clazz = new TargetObject().getClass();
         TargetObject targetObject = (TargetObject) clazz.newInstance();

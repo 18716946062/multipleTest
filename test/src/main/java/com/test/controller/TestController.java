@@ -21,7 +21,7 @@ public class TestController {
 
     @PostMapping("/test")
     public String test(){
-        log.info(">>>>>>>>登录进入");
+        log.info(">>>>>>>>进入test");
         return "testtttttttttttttt";
     }
 
