@@ -88,8 +88,11 @@ public class CreateThread {
             Thread.sleep(6000);
             return "Callableeeeeeeeeeee";
         });
+
+
         Thread thread = new Thread(futureTask, "implementCallable");
         thread.start();
+
         log.info("implementCallable(result): {}", futureTask.get());
     }
 

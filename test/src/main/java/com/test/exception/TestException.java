@@ -10,8 +10,8 @@ public class TestException extends RuntimeException {
 
     private String code;
 
-    public TestException(String code) {
-        this.code = code;
+    public TestException(Object message) {
+        super(message.toString());
     }
 
     public TestException(String code, Object message) {

@@ -24,6 +24,7 @@ public class Thread_ThreadLocal implements Runnable{
 
     @Override
     public void run() {
+
         System.out.println("Thread Name= "+Thread.currentThread().getName()+" default Formatter = "+formatter.get().toPattern());
         try {
             Thread.sleep(new Random().nextInt(1000));
@@ -39,7 +40,7 @@ public class Thread_ThreadLocal implements Runnable{
     /** ------------------------------------------------------------------------------------------------------------- */
     public static void main(String[] args) throws InterruptedException {
         Thread_ThreadLocal obj = new Thread_ThreadLocal();
-        for(int i=0 ; i<10; i++){
+        for(int i=0 ; i<10; i++) {
             Thread t = new Thread(obj, ""+i);
             Thread.sleep(new Random().nextInt(1000));
             t.start();
