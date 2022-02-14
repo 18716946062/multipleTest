@@ -21,7 +21,8 @@ import java.util.HashMap;
 @SpringBootTest
 @Slf4j
 public class JwtTest {
-    /*jwtTest*/
+
+    /** jwtTest */
     @Test
     public void jwtTest() {
         String HMAC256 = "123456789";
@@ -36,11 +37,11 @@ public class JwtTest {
         instance.add(Calendar.DATE, 7);
 
         String token = JWT.create()
-                .withHeader(map)// header
-                .withClaim("username", "zsy")// payload
+                .withHeader(map) // header
+                .withClaim("username", "zsy") // payload
                 .withClaim("userid", 123)
-                .withExpiresAt(instance.getTime())// 过期时间
-                .sign(Algorithm.HMAC256(HMAC256));// 签名
+                .withExpiresAt(instance.getTime()) // 过期时间
+                .sign(Algorithm.HMAC256(HMAC256)); // 签名
         return token;
     }
 
